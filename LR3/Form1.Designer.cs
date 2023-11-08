@@ -44,12 +44,14 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Psychology = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codeing = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +59,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             this.Sec,
             this.Psychology,
             this.PE,
-            this.Codeing});
+            this.Coding});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(12, 238);
             this.dataGridView1.Name = "dataGridView1";
@@ -122,6 +122,7 @@
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "ФИО";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -204,6 +205,24 @@
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 22;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Исходный:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 417);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Результат:";
+            // 
             // Name
             // 
             this.Name.HeaderText = "ФИО";
@@ -233,11 +252,11 @@
             this.PE.Name = "PE";
             this.PE.Width = 50;
             // 
-            // Codeing
+            // Coding
             // 
-            this.Codeing.HeaderText = "Програмирование";
-            this.Codeing.Name = "Codeing";
-            this.Codeing.Width = 50;
+            this.Coding.HeaderText = "Програмирование";
+            this.Coding.Name = "Coding";
+            this.Coding.Width = 50;
             // 
             // dataGridView2
             // 
@@ -250,10 +269,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 436);
+            this.dataGridView2.Location = new System.Drawing.Point(24, 433);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(397, 150);
-            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.TabIndex = 26;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -290,32 +309,14 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 50;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 219);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Исходный:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 417);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Результат:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 598);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -358,12 +359,14 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn BD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sec;
         private System.Windows.Forms.DataGridViewTextBoxColumn Psychology;
         private System.Windows.Forms.DataGridViewTextBoxColumn PE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codeing;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coding;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -371,8 +374,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
     }
 }
 
