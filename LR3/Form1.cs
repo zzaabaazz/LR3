@@ -22,6 +22,24 @@ namespace LR3
             res = new ArrayList();
         }
 
+
+        private void DelButton_Click(object sender, EventArgs e)
+        {
+            
+                try
+                {
+                    int num = dataGridView1.SelectedRows[0].Index;
+                    Students.RemoveAt(num);
+                    dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                }
+                catch
+                {
+                    MessageBox.Show("Выберите строку!!!!!!!!!!");
+                }
+            
+
+        }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
             string Name = textBox1.Text;

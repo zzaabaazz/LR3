@@ -72,7 +72,7 @@
             // 
             this.AddButton.Location = new System.Drawing.Point(74, 177);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 23);
+            this.AddButton.Size = new System.Drawing.Size(120, 55);
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -133,10 +133,11 @@
             // 
             this.DelButton.Location = new System.Drawing.Point(200, 177);
             this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(82, 23);
+            this.DelButton.Size = new System.Drawing.Size(82, 55);
             this.DelButton.TabIndex = 6;
             this.DelButton.Text = "Удалить выбранную точку";
             this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // button1
             // 
@@ -411,7 +412,7 @@
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AddButton);
-            //this.Name = "Form1";
+            this.Name = "Form1";
             this.Text = "Список";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
