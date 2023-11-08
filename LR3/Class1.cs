@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LR3
-{
+{ 
     internal class Student
     {
         string Name;
@@ -55,6 +57,15 @@ namespace LR3
             get { return Coding; }
             set { Coding = value; }
         }
-        
+        public int Pos()
+        {
+            int kol = 0;
+            if (BD > 2) kol++;
+            if (Sec > 2) kol++;
+            if (Psychology > 2) kol++;
+            if (PE > 2) kol++;
+            if (Coding > 2) kol++;
+            return kol;
+        }
     }
 }

@@ -147,6 +147,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Решить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -412,7 +413,6 @@
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AddButton);
-            this.Name = "Form1";
             this.Text = "Список";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

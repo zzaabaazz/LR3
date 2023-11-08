@@ -40,6 +40,18 @@ namespace LR3
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            res.Clear();
+            dataGridView2.Rows.Clear();
+            foreach (Student student in Students)//kek
+            {
+
+                if (student.Pos()>2)
+                    dataGridView2.Rows.Add(student.name, student.bd, student.sec, student.psy, student.pe, student.code);
+            }
+        }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
             string Name = textBox1.Text;
